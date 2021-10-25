@@ -1,0 +1,17 @@
+@import 'fonts';
+@import 'reset';
+@import 'vars';
+@import 'mixins';
+@import 'libs';
+@import 'global';
+
+@import 'components/_header';
+@import 'home-page/_main-slider';
+@import 'home-page/_advantages';
+@import 'home-page/_top-products';
+@import 'home-page/_banners';
+@import 'home-page/_discount';
+@import 'home-page/_brands';
+@import 'home-page/_news';
+@import 'components/_footer';
+

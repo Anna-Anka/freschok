@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фрешок</title>
+    <link rel="icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body class="body">
+    <div class="wrapper">
+        @include("./components/header.html")
+        <main class="main">
+            @include("./home-page/main-slider.html")
+            @include("./home-page/advantages.html")
+            @include("./home-page/top-products.html")
+            @include("./home-page/banners.html")
+            @include("./home-page/discount.html")
+            @include("./home-page/brands.html")
+            @include("./home-page/news.html")
+        </main>
+        @include("./components/footer.html")
+    </div>
+</body>
+<script src="js/main.min.js"></script>
+
+</html>
