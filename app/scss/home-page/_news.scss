@@ -29,27 +29,38 @@
         font-weight: $fw-700;
         position: relative;
         display: block;
-        color: $special;
+        color: $green-900;
         align-self: self-start;
         text-transform: uppercase;
-        transition: color 0.3s;
+        transition: color 0.3s, box-shadow 0.3s, opacity 0.4s;
 
         &::before {
             content: "";
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, opacity 0.3s;
             position: absolute;
             bottom: -6px;
             width: 100%;
             height: 2px;
-            background-color: $special;
+            background-color: $green-900;
+        }
+
+        &:focus {
+            box-shadow: 0 0 0 1px $green-900;
+            &:before {
+                opacity: 0;
+            }
         }
 
         &:hover {
-            color: $special-dark;
+            color: $green-1000;
 
             &::before {
-                background-color: $special-dark;
+                background-color: $green-1000;
             }
+        }
+
+        &:active {
+            opacity: 0.5;
         }
     }
 
@@ -75,68 +86,3 @@
     }
 }
 
-.news-card {
-    border-radius: 6px;
-    background-color: $light;
-    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.25);
-    padding-bottom: 18px;
-
-    &__top {
-        position: relative;
-        margin-bottom: 18px;
-
-        @include max-w($lg) {
-            margin-bottom: 15px;
-        }
-    }
-
-    &__label {
-        position: absolute;
-        top: 0;
-        left: 20px;
-        background-color: $light;
-        padding: 18px 6px 10px;
-        min-width: 65px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    &__month {
-        margin-bottom: 4px;
-        font-size: 10px;
-        font-weight: $fw-700;
-    }
-
-    &__date {
-        font-size: 30px;
-        line-height: 1;
-        font-family: $rd;
-        font-weight: $fw-600;
-    }
-
-    &__img {
-        @include max-w($md) {
-            height: 200px;
-        }
-    }
-
-    &__link {
-        padding: 0 18px;
-        font-size: 16px;
-        line-height: 1.5;
-        font-weight: $fw-600;
-        display: block;
-        margin-top: auto;
-        transition: color 0.3s;
-
-        &:hover {
-            color: $special;
-        }
-
-        @include max-w($md) {
-            font-size: 14px;
-            padding: 0 15px;
-        }
-    }
-}

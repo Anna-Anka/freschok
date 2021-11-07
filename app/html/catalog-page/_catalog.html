@@ -1,0 +1,229 @@
+<section class="catalog">
+    <h2 class="visually-hidden">
+        Каталог продуктов
+    </h2>
+    <div class="catalog-filters">
+        <button class="catalog-filters__button" type="button">
+            <svg class="catalog-filters__icon catalog-filters__icon--filter">
+                <use xlink:href="img/sprite.svg#filters-icon"></use>
+            </svg>
+        </button>
+        <select class="catalog-filters__item test" name="sort">
+            <option value="">По названию</option>
+            <option value="">По популярности</option>
+            <option value="">Сначала дешевые</option>
+            <option value="">Сначала дорогие</option>
+            <option value="">По алфавиту</option>
+        </select>
+        <select class="catalog-filters__item" name="number">
+            <option value="">По 12</option>
+            <option value="">По 18</option>
+            <option value="">По 24</option>
+            <option value="">По 30</option>
+            <option value="">По 36</option>
+        </select>
+        <button class="catalog-filters__btn catalog-filters__btn--list" type="button">
+            <svg class="catalog-filters__icon">
+                <use xlink:href="img/sprite.svg#btn-list"></use>
+            </svg>
+        </button>
+        <button class="catalog-filters__btn catalog-filters__btn--grid catalog-filters__btn--active" type="button">
+            <svg class="catalog-filters__icon">
+                <use xlink:href="img/sprite.svg#btn-grid"></use>
+            </svg>
+        </button>
+    </div>
+    <ul class="catalog__items">
+        <li class="catalog__item">
+            @include("../components/_product-card.html", {
+                "section" : "catalog",
+                "new" : "new",
+                "discount" : "-50%",
+                "img" : "products/product-1",
+                "alt" : "Ананас",
+                "status" : "available",
+                "rating" : "4.5",
+                "name" : "Ананас, 1 кг",
+                "priceCurrent" : "999 ₽",
+                "priceOld" : "1999 ₽",
+            })
+        </li>
+        <li class="catalog__item">
+            @include("../components/_product-card.html", {
+            "section" : "catalog",
+            "discount" : "",
+            "img" : "products/product-2",
+            "alt" : "Лимон",
+            "status" : "available",
+            "rating" : "4.5",
+            "name" : "Лимон, 1кг",
+            "priceCurrent" : "199 ₽",
+            "priceOld" : "",
+            })
+        </li>
+        <li class="catalog__item">
+            @include("../components/_product-card.html", {
+            "section" : "catalog",
+            "discount" : "",
+            "img" : "products/product-3",
+            "alt" : "Питахайя красная с белой мякотью",
+            "status" : "available",
+            "rating" : "4.5",
+            "name" : "Питахайя красная с белой мякотью, 1шт",
+            "priceCurrent" : "1019 ₽",
+            "priceOld" : "",
+            })
+        </li>
+        <li class="catalog__item">
+            @include("../components/_product-card.html", {
+            "section" : "catalog",
+            "hit" : "hit",
+            "discount" : "",
+            "img" : "products/product-5",
+            "alt" : "Морковь молодая",
+            "status" : "none",
+            "rating" : "4.5",
+            "name" : "Морковь молодая с бабушкиной грядки, 1кг",
+            "priceCurrent" : "1019 ₽",
+            "priceOld" : "",
+            })
+        </li>
+        <li class="catalog__item">
+            @include("../components/_product-card.html", {
+            "section" : "catalog",
+            "discount" : "-30%",
+            "img" : "products/product-6",
+            "alt" : "Напиток сокосодержащий",
+            "status" : "available",
+            "rating" : "4.5",
+            "name" : "Напиток сокосодержащий Sanpellegrino Aranciata Orange Красный апельсин безалкогольн..",
+            "priceCurrent" : "199 ₽",
+            "priceOld" : "299 ₽",
+            })
+        </li>
+        <li class="catalog__item">
+            @include("../components/_product-card.html", {
+            "section" : "catalog",
+            "new" : "new",
+            "discount" : "",
+            "img" : "products/product-7",
+            "alt" : "Кофе с коноплей",
+            "status" : "ends",
+            "rating" : "4.5",
+            "name" : "Кофе с коноплей органический Caffé Salomoni 250г",
+            "priceCurrent" : "977 ₽",
+            "priceOld" : "",
+            })
+        </li>
+        <li class="catalog__item">
+            @include("../components/_product-card.html", {
+            "section" : "catalog",
+            "new" : "new",
+            "discount" : "",
+            "img" : "products/product-4",
+            "alt" : "Перец оранжевый",
+            "status" : "ends",
+            "rating" : "4.5",
+            "name" : "Перец оранжевый, 1кг",
+            "priceCurrent" : "349 ₽",
+            "priceOld" : "",
+            })
+        </li>
+        <li class="catalog__item">
+            @include("../components/_product-card.html", {
+            "section" : "catalog",
+            "discount" : "",
+            "img" : "products/product-8",
+            "alt" : "Кетчуп томатный",
+            "status" : "available",
+            "rating" : "4.5",
+            "name" : "Кетчуп томатный детский органический Bio-Zentrale 500мл",
+            "priceCurrent" : "600 ₽",
+            "priceOld" : "",
+            })
+        </li>
+        <li class="catalog__item">
+            @include("../components/_product-card.html", {
+            "section" : "catalog",
+            "new" : "new",
+            "discount" : "-50%",
+            "img" : "products/product-1",
+            "alt" : "Ананас",
+            "status" : "available",
+            "rating" : "4.5",
+            "name" : "Ананас, 1 кг",
+            "priceCurrent" : "999 ₽",
+            "priceOld" : "1999 ₽",
+            })
+        </li>
+        <li class="catalog__item">
+            @include("../components/_product-card.html", {
+            "section" : "catalog",
+            "hit" : "hit",
+            "discount" : "",
+            "img" : "products/product-5",
+            "alt" : "Морковь молодая",
+            "status" : "none",
+            "rating" : "4.5",
+            "name" : "Морковь молодая с бабушкиной грядки, 1кг",
+            "priceCurrent" : "1019 ₽",
+            "priceOld" : "",
+            })
+        </li>
+        <li class="catalog__item">
+            @include("../components/_product-card.html", {
+            "section" : "catalog",
+            "discount" : "-30%",
+            "img" : "products/product-6",
+            "alt" : "Напиток сокосодержащий",
+            "status" : "available",
+            "rating" : "4.5",
+            "name" : "Напиток сокосодержащий Sanpellegrino Aranciata Orange Красный апельсин безалкогольн..",
+            "priceCurrent" : "199 ₽",
+            "priceOld" : "299 ₽",
+            })
+        </li>
+        <li class="catalog__item">
+            @include("../components/_product-card.html", {
+            "section" : "catalog",
+            "new" : "new",
+            "discount" : "",
+            "img" : "products/product-7",
+            "alt" : "Кофе с коноплей",
+            "status" : "ends",
+            "rating" : "4.5",
+            "name" : "Кофе с коноплей органический Caffé Salomoni 250г",
+            "priceCurrent" : "977 ₽",
+            "priceOld" : "",
+            })
+        </li>
+    </ul>
+    <div class="catalog__footer">
+        <button class="catalog__button button button--normal" type="button">
+            Показать еще
+        </button>
+        <ul class="pagination">
+            <li class="pagination__item">
+                <a class="pagination__link pagination__link--unavailable" href="#"style="background-image: url('img/svg/chevron-light.svg');"></a>
+            </li>
+            <li class="pagination__item">
+                <a class="pagination__link pagination__link--active" href="#">1</a>
+            </li>
+            <li class="pagination__item">
+                <a class="pagination__link" href="#">2</a>
+            </li>
+            <li class="pagination__item">
+                <a class="pagination__link" href="#">...</a>
+            </li>
+            <li class="pagination__item">
+                <a class="pagination__link" href="#">9</a>
+            </li>
+            <li class="pagination__item">
+                <a class="pagination__link" href="#">10</a>
+            </li>
+            <li class="pagination__item">
+                <a class="pagination__link" href="#" style="background-image: url('img/svg/chevron-dark.svg');"></a>
+            </li>
+        </ul>
+    </div>
+</section>

@@ -1,0 +1,258 @@
+.filter {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    position: absolute;
+
+    &--hidden {
+        display: none;
+    }
+
+    &__title {
+        position: relative;
+        padding: 18px;
+        font-size: 24px;
+        font-weight: $fw-400;
+        letter-spacing: 1px;
+        line-height: 1.2;
+        font-family: $ruda;
+        cursor: pointer;
+
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 10px;
+            height: 18px;
+            background-image: url('../img/svg/chevron.svg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            top: 50%;
+            right: 18px;
+            transform: translateY(-50%) rotate(-90deg);
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 1px;
+            background-color: $silver-600;
+        }
+    }
+
+    &__text,
+    &__label,
+    &__link {
+        cursor: pointer;
+        font-size: 18px;
+        letter-spacing: 1px;
+        line-height: 1.3;
+    }
+
+    &__label {
+        display: flex;
+        align-items: center;
+    }
+
+    &__checkbox {
+        width: 24px;
+        height: 24px;
+        background-color: $silver-100;
+        border: 1px solid $silver-600;
+        border-radius: 3px;
+        display: inline-block;
+        margin-right: 12px;
+        transition: border-color 0.3s;
+
+        &:hover {
+            border-color: $dark-500;
+        }
+    }
+
+    &__items {
+        padding: 18px;
+        max-height: 300px;
+        overflow-y: auto;
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 12px;
+        }
+    }
+
+    &__price-number {
+        font-size: 16px;
+        line-height: 1.2;
+        color: $silver-600;
+        display: flex;
+        padding: 0 18px;
+        justify-content: space-between;
+    }
+
+    &__price-from,
+    &__price-to {
+        color: $dark-500;
+        width: 80px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $silver-100;
+        border: 1px solid $silver-700;
+        border-radius: 3px;
+        display: flex;
+        margin-right: 6px;
+        text-align: center;
+
+        &:focus {
+            box-shadow: 0 0 0 3px $green-200;
+        }
+    }
+
+    &__price-currency {
+        display: flex;
+        align-items: center;
+
+        span:not(:last-child) {
+            margin-right: 6px;
+        }
+    } 
+
+    &__link {
+        transition: color 0.3s, opacity 0.3s;
+
+        &:focus {
+            text-decoration: underline;
+        }
+
+        &:hover {
+            color: $green-900;
+        }
+
+        &:active {
+            opacity: 0.3;
+        }
+    }
+}
+
+.filter__input:checked+.filter__checkbox {
+    background-image: url('../img/svg/check.svg');
+    background-repeat: no-repeat;
+    background-size: 12px 9px;
+    background-position: center;
+    border-color: $dark-500;
+}
+
+.filters {
+    &__items {
+        @include max-w($lg) {
+            padding-top: 76px;
+        }
+    }
+
+    &--catalog {
+        margin: 0 30px 0 0;
+        flex-direction: column;
+        position: relative;
+        display: block;
+
+        @include max-w($lg) {
+            margin-right: 0;
+        }
+
+        .filters__item {
+            width: 302px;
+            border: 1px solid $silver-600;
+            border-radius: 10px;
+            margin: 0;
+
+            &:not(:last-child) {
+                margin-bottom: 30px;
+            }
+        }
+
+        @include max-w($lg) {
+            transform: translateX(-200%);
+            transition: transform 0.5s;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 101;
+            background-color: $white;
+            height: 100vh;
+            overflow-y: auto;
+            max-width: 320px;
+            width: 100%;
+            justify-content: flex-start;
+        }
+    }
+
+    &__icon {
+        display: none;
+        width: 18px;
+        height: 18px;
+        fill: $black;
+
+        @include max-w($lg) {
+            display: block;
+        }
+    }
+
+    &__close {
+        background-color: transparent;
+        margin-left: auto;
+        position: absolute;
+        right: 32px;
+        top: 30px;
+    }
+
+    &--active {
+        transform: translate(0);
+    }
+}
+
+.filter-price {
+    .filter__form {
+        padding: 23px 0 18px;
+    }
+}
+
+.irs--flat {
+    max-width: 264px;
+    margin: 0 auto;
+}
+
+.irs--flat .irs-bar {
+    height: 2px;
+    background-color: $green-900;
+}
+
+.irs--flat .irs-line {
+    height: 2px;
+    background-color: $silver-700;
+    border-radius: 4px;
+}
+
+.irs--flat .irs-handle {
+    top: 17px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: $green-900;
+}
+
+.irs--flat .irs-handle>i:first-child,
+.irs--flat .irs-from,
+.irs--flat .irs-to,
+.irs--flat .irs-single,
+.irs--flat .irs-min,
+.irs--flat .irs-max {
+    display: none;
+}

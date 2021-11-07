@@ -1,0 +1,229 @@
+<header class="header">
+
+    <nav class="header__navigation"> 
+        <div class="header__info">
+            <div class="container">
+                <ul class="navigation-info">
+                    <li class="navigation-info__list">
+                        <ul class="navigation-info__items">
+                            <li class="navigation-info__item">
+                                <a class="navigation-info__link" href="#">
+                                    <svg class="navigation-info__icon">
+                                        <use xlink:href="img/sprite.svg#delivery-icon"></use>
+                                    </svg>
+                                    адрес и время доставки
+                                </a>
+                            </li>
+                            <li class="navigation-info__item">
+                                <a class="navigation-info__link" href="tel:+89321850000">
+                                    <svg class="navigation-info__icon">
+                                        <use xlink:href="img/sprite.svg#phone-icon"></use>
+                                    </svg>
+                                    горячая линия 24/7
+                                </a>
+                            </li>
+                        </ul> 
+                    </li>
+                    <li class="navigation-info__about">
+                        <ul class="navigation-info__about-items">
+                            <li class="navigation-info__about-item">
+                                <a class="navigation-info__about-link" href="#">
+                                    доставка
+                                </a>
+                            </li>
+                            <li class="navigation-info__about-item">
+                                <a class="navigation-info__about-link" href="#">
+                                    о нас
+                                </a>
+                            </li>
+                            <li class="navigation-info__about-item">
+                                <a class="navigation-info__about-link" href="#">
+                                    новости
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="navigation-body">
+            <div class="container">
+                <div class="navigation-body__content">
+                    <a class="navigation-body__logo logo" href="#">
+                        <img class="logo__img" src="img/svg/logo.svg" alt="логотип" width="200" height="60">
+                    </a>
+                    <div class="navigation-body__catalog">
+                        <button class="navigation-body__btn button button--border" type="button">
+                            <span class="navigation-body__line"></span>
+                            Каталог продуктов
+                        </button>
+                        <ul class="catalog">
+                            <li class="catalog__item">
+                                <a class="catalog__link catalog__link--active" href="#">
+                                    Овощи и фрукты
+                                </a>
+                            </li>
+                            <li class="catalog__item">
+                                <a class="catalog__link" href="#">
+                                    Бакалея
+                                </a>
+                            </li>
+                            <li class="catalog__item">
+                                <a class="catalog__link" href="#">
+                                    Молочные продукты
+                                </a>
+                            </li>
+                            <li class="catalog__item">
+                                <a class="catalog__link" href="#">
+                                    Хлеб
+                                </a>
+                            </li>
+                            <li class="catalog__item">
+                                <a class="catalog__link" href="#">
+                                    Мясо
+                                </a>
+                            </li>
+                            <li class="catalog__item">
+                                <a class="catalog__link" href="#">
+                                    Колбаса
+                                </a>
+                            </li>
+                            <li class="catalog__item">
+                                <a class="catalog__link" href="#">
+                                    Рыба
+                                </a>
+                            </li>
+                            <li class="catalog__item">
+                                <a class="catalog__link" href="#">
+                                    Алкоголь
+                                </a>
+                            </li>
+                            <li class="catalog__item">
+                                <a class="catalog__link" href="#">
+                                    Напитки
+                                </a>
+                            </li>
+                            <li class="catalog__item">
+                                <a class="catalog__link" href="#">
+                                    Торты
+                                </a>
+                            </li>
+                            <li class="catalog__item">
+                                <a class="catalog__link" href="#">
+                                    Мясо
+                                </a>
+                            </li>
+                            <li class="catalog__item">
+                                <a class="catalog__link" href="#">
+                                    Чай, кофе
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <form class="navigation-body__search search">
+                        <div class="search__field">
+                            <label class="visually-hidden" for="search">Найти в магазине</label>
+                            <input class="search__enter" id="search" type="text" placeholder="Найти в магазине ..." name="search" required>
+                        </div>
+                        <button class="button button--dark" type="submit">
+                            поиск
+                        </button>
+                    </form>
+                    <ul class="navigation-account">
+                        <li class="navigation-account__item">
+                            <a class="navigation-account__link" href="#">
+                                <span class="visually-hidden">
+                                    Зарегистрироваться
+                                </span>
+                                <svg class="navigation-account__icon">
+                                    <use xlink:href="img/sprite.svg#user-account-icon"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="navigation-account__item">
+                            <a class="navigation-account__link" href="#">
+                                <span class="visually-hidden">
+                                    Понравившиеся товары
+                                </span>
+                                <svg class="navigation-account__icon">
+                                    <use xlink:href="img/sprite.svg#user-like-icon"></use>
+                                </svg>
+                                <span class="navigation-account__num">12</span>
+                            </a>
+                        </li>
+                        <li class="navigation-account__item">
+                            <div class="navigation-account__basket">
+                                <button class="navigation-account__link navigation-account__link--basket" type="button">
+                                    <span class="visually-hidden">
+                                        Корзина
+                                    </span>
+                                    <svg class="navigation-account__icon">
+                                        <use xlink:href="img/sprite.svg#user-basket-icon"></use>
+                                    </svg>
+                                    <span class="navigation-account__num">12</span>
+                                </button>
+                                <div class="basket">
+                                    <div class="basket__header">
+                                        <div class="basket__text">
+                                            <span class="basket__title">
+                                                Корзина
+                                            </span>
+                                            <button class="basket__clear" type="button">
+                                                очистить корзину
+                                            </button>
+                                        </div>
+                                        <button class="basket__close" type="button">
+                                            <svg class="basket__icon">
+                                                <use xlink:href="img/sprite.svg#close-icon"></use>
+                                            </svg>
+                                            <span class="visually-hidden">
+                                                Закрыть корзину
+                                            </span>
+                                        </button>
+                                    </div>
+                                    <ul class="basket__body">
+                                        <li class="basket__item">
+                                            @include("../components/_product-card.html", {
+                                            "section" : "basket",
+                                            "img" : "products/product-1",
+                                            "alt" : "Ананас",
+                                            "name" : "Ананас, 1 кг",
+                                            "productPrice" : "999",
+                                            "price" : "1998"
+                                            })
+                                        </li>
+                                        <li class="basket__item">
+                                            @include("../components/_product-card.html", {
+                                            "section" : "basket",
+                                            "img" : "products/product-3",
+                                            "alt" : "Питахайя красная с белой мякотью",
+                                            "name" : "Питахайя красная с белой мякотью, 1шт",
+                                            "productPrice" : "1019",
+                                            "price" : "2038"
+                                            })
+                                        </li>
+                                    </ul>
+                                    <div class="basket__footer">
+                                        <div class="basket__total">
+                                            <p class="basket__subtitle">
+                                                Товаров на сумму
+                                            </p>
+                                            <span class="basket__price">
+                                                2038
+                                                <span class="basket__currency">₽</span>
+                                            </span>
+                                        </div>
+                                        <button class="basket__btn button button--normal" type="button">
+                                            Оформить заказ
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav> 
+</header> 

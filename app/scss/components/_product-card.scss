@@ -1,0 +1,139 @@
+.product-card {
+    background-color: $white;
+    display: flex;
+    justify-content: start;
+    border: 1px solid $silver-600;
+    border-radius: 6px;
+    width: 100%;
+    transition: border-color 0.3s;
+
+    &:hover {
+        border-color: $green-900;
+    }
+
+    &__img {
+        padding: 0;
+    }
+
+    &__footer {
+        justify-content: space-between;
+    }
+
+    &__descr {
+        max-width: 171px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__info {
+        display: flex;
+        margin-top: auto;
+    }
+
+    &__status {
+        font-size: 10px;
+        line-height: 1;
+        margin-bottom: 5px;
+        font-weight: $fw-600;
+        text-transform: uppercase;
+
+        &--available {
+            color: $green-900;
+        }
+
+        &--ends {
+            color: $red-900;
+        }
+
+        &--none {
+            color: $silver-600;
+        }
+    }
+
+    &__prices {
+        margin-right: 23px;
+    }
+
+    &__price {
+        font-weight: $fw-700;
+
+        &:not(:last-child) {
+            margin-right: 13px;
+        }
+
+        &--old {
+            font-size: 12px;
+            font-weight: $fw-400;
+        }
+    }
+
+    &__currency {
+        font-size: 14px;
+    }
+
+    &__rating {
+        font-weight: $fw-700;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: -20px;
+            width: 16px;
+            height: 16px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background-image: url("../img/icons/star-icon.svg");
+        }
+    }
+
+    &__like {
+        background-color: transparent;
+        z-index: 5;
+        transition: box-shadow 0.3s, opacity 0.3s;
+        
+        &:focus {
+            box-shadow: 0 0 0 1px $green-900;
+        }
+
+        &:active {
+            opacity: 0.5;
+        }
+    }
+
+    &__link {
+        transition: box-shadow 0.3s, color 0.3s, opacity 0.3s;
+
+        &:focus {
+            text-decoration: underline;
+        }
+
+        &:hover {
+            color: $green-900
+        }
+
+        &:active {
+            opacity: 0.5;
+        }
+    }
+
+    &__btn {
+        border: 1px solid transparent;
+        transition: border-color 0.3s, background-color 0.3s, opacity 0.3s;
+
+        &:focus {
+            border-color: $green-900;
+        }
+
+        &:hover {
+            background-color: $yellow-900;
+        }
+
+        &:active {
+            opacity: 0.5;
+        }
+    }
+}

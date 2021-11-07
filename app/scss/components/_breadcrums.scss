@@ -1,0 +1,54 @@
+.breadcrums {
+    background-color: $silver-100;
+    margin-bottom: 48px;
+
+    @include max-w($lg) {
+        margin-bottom: 30px;
+    }
+
+    &__items {
+        padding: 24px 0;
+        display: flex;
+    }
+
+    &__item {
+        &:not(:last-child) {
+            position: relative;
+            margin-right: 16px;
+            padding-right: 14px;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 0;
+                width: 6px;
+                height: 10px;
+                background-image: url('../img/svg/chevron.svg');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+
+            }
+        }
+    }
+
+    &__link {
+        font-weight: $fw-400;
+        color: $dark-500;
+        transition: opacity 0.3s, color 0.3s;
+
+        &:focus {
+            text-decoration: underline;
+        }
+
+        &:hover {
+            color: $green-900;
+        }
+
+        &:active {
+            opacity: 0.7;
+        }
+    }
+}

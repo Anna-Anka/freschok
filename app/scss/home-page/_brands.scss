@@ -1,29 +1,14 @@
 .brands {
-    margin-bottom: 76px;
+    margin-bottom: 63px;
 
     @include max-w($lg) {
-        margin-bottom: 50px;
+        margin-bottom: 45px;
     }
 
-    &__items {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow-x: auto;
-    }
-
-    &__item {
-        &:not(:last-child) {
-            margin-right: 140px;
-
-            @include max-w($lg) {
-                margin-right: 90px;
-            }
-        }
-    }
-
-    &__link {
-        display: block;
+    &__img {
+        object-fit: contain;
+        
+        max-width: initial;
         transition: opacity 0.3s;
 
         &:hover {
@@ -31,18 +16,19 @@
         }
     }
 
-    &__img {
-        object-fit: contain;
-        width: 80px;
-        max-width: initial;
-    }
-
     .slick-track {
-        width: 100%;
-        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .slick-slide {
-        margin-right: 140px;
+        &:not(:last-child) {
+            margin-right: 140px;
+
+            @include max-w($lg) {
+                margin-right: 95px;
+            }
+        }
     }
 }

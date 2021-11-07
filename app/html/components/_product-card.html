@@ -1,0 +1,267 @@
+@if (context.section === "top") {
+    <article class="product-card">
+        <div class="product-card__header">
+            <ul class="product-card__badges">
+                @if (context.new === 'new') {
+                <li class="product-card__badge product-card__badge--new">
+                    Новинка
+                </li>
+                }
+
+                @if (context.discount != "") {
+                <li class="product-card__badge product-card__badge--discount">
+                    @discount
+                </li>
+                }
+
+                @if (context.hit === 'hit') {
+                <li class="product-card__badge product-card__badge--hit">
+                    Хит
+                </li>
+                }
+            </ul>
+            <button class="product-card__like" type="button">
+                <span class="visually-hidden">
+                    Добавить в понравившиеся
+                </span>
+                <svg class="product-card__like-icon">
+                    <use xlink:href="img/sprite.svg#user-like-icon"></use>
+                </svg>
+            </button>
+        </div>
+        <div class="product-card__picture">
+            <a class="product-card__btn" href="#">
+                <span class="visually-hidden">
+                    Посмотреть товар
+                </span>
+                <svg class="product-card__icon-search">
+                    <use xlink:href="img/sprite.svg#search-icon"></use>
+                </svg>
+            </a>
+            <img class="product-card__img" src="img/products/@img.jpg" alt="@alt" width="300" height="215">
+        </div>
+        <h3 class="product-card__title">
+            <a class="product-card__link" href="#">
+                @name
+            </a>
+        </h3>
+        <div class="product-card__footer">
+            <div class="product-card__prices">
+                @if (context.priceOld != "") {
+                <span class="product-card__price product-card__price--old">@priceOld</span>
+                }
+                <span class="product-card__price">
+                    @priceCurrent
+                </span>
+            </div>
+            <button class="button button--basket product-card__basket" type="button">
+                <span class="visually-hidden">
+                    Добавить в корзину
+                </span>
+                <svg class="product-card__icon">
+                    <use xlink:href="img/sprite.svg#user-basket-icon"></use>
+                </svg>
+            </button>
+        </div>
+    </article>
+}
+
+@if (context.section === "discount") {
+    <article class="product-card">
+        <div class="product-card__left">
+            @if (context.new === 'new') {
+            <li class="product-card__badge product-card__badge--new">
+                Новинка
+            </li>
+            }
+
+            @if (context.hit === 'hit') {
+            <li class="product-card__badge product-card__badge--hit">
+                Хит
+            </li>
+            }
+            <a class="product-card__link" href="#">
+                <img class="product-card__img" src="img/@img.jpg" alt="@alt" width="100" height="100">
+            </a>
+        </div>
+        <div class="product-card__descr">
+            <h3 class="product-card__title">
+                <a class="product-card__link" href="#">
+                    @name
+                </a>
+            </h3>
+            <div class="product-card__footer">
+
+                @if (context.status === "ends") {
+                    <span class="product-card__status product-card__status--ends">
+                        заканчивается
+                    </span>
+                }
+
+                @if (context.status === 'available') {
+                    <span class="product-card__status product-card__status--available">
+                        в наличии
+                    </span>
+                }
+
+                @if (context.status === 'none') {
+                    <span class="product-card__status product-card__status--none">
+                        нет в наличии
+                    </span>
+                }
+
+                <div class="product-card__info">
+                    <div class="product-card__prices">
+                        <p class="product-card__price">
+                            @priceCurrent<span class="product-card__currency">₽</span>
+                        </p>
+                        @if (context.priceOld != "") {
+                            <span class="product-card__price product-card__price--old">
+                                @priceOld
+                            </span>
+                        }
+                    </div>
+                    <span class="product-card__rating">
+                        @rating
+                    </span>
+                </div>
+            </div>
+        </div>
+    </article>
+}
+
+@if (context.section === "basket") {
+    <article class="product-card">
+        <a class="product-card__link-img" href="#">
+            <img class="product-card__img" src="img/@img.jpg" alt="@alt" width="60" height="60">
+        </a>
+        <div class="product-card__descr">
+            <h3 class="product-card__title">
+                <a class="product-card__link" href="#">
+                    @name
+                </a>
+            </h3>
+            <p class="product-card__price">
+                @productPrice<span class="product-card__currency">₽</span>
+            </p>
+        </div>
+
+        <div class="product-card__info">
+            <button class="product-card__close" type="button">
+                <svg class="product-card__icon">
+                    <use xlink:href="img/sprite.svg#close-icon"></use>
+                </svg>
+                <span class="visually-hidden">
+                    Удалить из корзины
+                </span>
+            </button>
+            <div class="product-card__cost">
+                <div class="product-card__count">
+                    <label class="product-card__label" for="count"></label>
+                    <input class="product-card__field" type="number" min="1" value="2" id="count" name="count">
+                </div>
+                <p class="product-card__price">
+                    @price<span class="product-card__currency">₽</span>
+                </p>
+            </div>
+        </div>
+    </article>
+}
+
+@if (context.section === "catalog") {
+<article class="product-card">
+    <div class="product-card__body">
+        <div class="product-card__header">
+            <ul class="product-card__badges">
+                @if (context.new === 'new') {
+                <li class="product-card__badge product-card__badge--new">
+                    Новинка
+                </li>
+                }
+
+                @if (context.discount != "") {
+                <li class="product-card__badge product-card__badge--discount">
+                    @discount
+                </li>
+                }
+
+                @if (context.hit === 'hit') {
+                <li class="product-card__badge product-card__badge--hit">
+                    Хит
+                </li>
+                }
+            </ul>
+            <button class="product-card__like" type="button">
+                <span class="visually-hidden">
+                    Добавить в понравившиеся
+                </span>
+                <svg class="product-card__like-icon">
+                    <use xlink:href="img/sprite.svg#user-like-icon"></use>
+                </svg>
+            </button>
+        </div>
+
+        <div class="product-card__inner">
+            <a href="#">
+                <img class="product-card__img" src="img/@img.jpg" alt="@alt" width="300" height="215">
+            </a>
+
+            <div class="product-card__content">
+                <div class="product-card__wrapper">
+                    <div class="product-card__info">
+                        @if (context.status === "ends") {
+                        <span class="product-card__status product-card__status--ends">
+                            заканчивается
+                        </span>
+                        }
+
+                        @if (context.status === 'available') {
+                        <span class="product-card__status product-card__status--available">
+                            в наличии
+                        </span>
+                        }
+
+                        @if (context.status === 'none') {
+                        <span class="product-card__status product-card__status--none">
+                            нет в наличии
+                        </span>
+                        }
+
+                        <span class="product-card__rating">
+                            @rating
+                        </span>
+                    </div>
+                    <h3 class="product-card__title">
+                        <a class="product-card__link" href="#">
+                            @name
+                        </a>
+                    </h3>
+                </div>
+
+                <div class="product-card__footer">
+                    <div class="product-card__prices">
+                        @if (context.priceOld != "") {
+                        <span class="product-card__price product-card__price--old">@priceOld</span>
+                        }
+                        <span class="product-card__price">
+                            @priceCurrent
+                        </span>
+                    </div>
+                    <button class="button button--basket product-card__basket" type="button">
+                        <span class="visually-hidden">
+                            Добавить в корзину
+                        </span>
+                        <svg class="product-card__icon">
+                            <use xlink:href="img/sprite.svg#user-basket-icon"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+
+    
+</article>
+}

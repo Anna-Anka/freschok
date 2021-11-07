@@ -1,0 +1,142 @@
+<section class="discount section">
+    <div class="container">
+        <h2 class="discount__title title">
+            акции
+        </h2>
+        <div class="discount__box" data-ref="discount">
+            <ul class="filters">
+                <li class="filters__item">
+                    <button class="filters__btn" type="button" data-filter="all">
+                        все товары
+                    </button>
+                </li>
+                <li class="filters__item">
+                    <button class="filters__btn" type="button" data-filter=".category-new">
+                        новинки
+                    </button>
+                </li>
+                <li class="filters__item">
+                    <button class="filters__btn" type="button" data-filter=".category-hit">
+                        хиты
+                    </button>
+                </li>
+            </ul>
+            <ul class="discount__items">
+                <li class="discount__item mix category-new">
+                    @include("../components/_product-card.html", {
+                        "section" : "discount",
+                        "new" : "new",
+                        "img" : "products/product-1",
+                        "alt" : "Ананас",
+                        "name" : "Ананас, 1 кг",
+                        "status" : "available",
+                        "priceCurrent" : 999,
+                        "priceOld" : "1999 ₽",
+                        "rating" : "4.9",
+                    })
+                </li>
+
+                <li class="discount__item mix category-new">
+                    @include("../components/_product-card.html", {
+                    "section" : "discount",
+                    "new" : "new",
+                    "img" : "products/product-7",
+                    "alt" : "Кофе с коноплей",
+                    "name" : "Кофе с коноплей органический Caffé Salomoni 250г",
+                    "status" : "ends",
+                    "priceCurrent" : 777,
+                    "priceOld" : "877 ₽",
+                    "rating" : "4.9",
+                    })
+                </li>
+
+                <li class="discount__item mix category-new">
+                    @include("../components/_product-card.html", {
+                    "section" : "discount",
+                    "new" : "new",
+                    "img" : "discount/discount-1",
+                    "alt" : "Клубника",
+                    "name" : "Клубника, 1 кг",
+                    "status" : "none",
+                    "priceCurrent" : 440,
+                    "priceOld" : "600 ₽",
+                    "rating" : "5.0",
+                    })
+                </li>
+
+                <li class="discount__item mix category-new">
+                    @include("../components/_product-card.html", {
+                    "section" : "discount",
+                    "new" : "new",
+                    "img" : "discount/discount-2",
+                    "alt" : "Манго",
+                    "name" : "Манго, 1 шт",
+                    "status" : "available",
+                    "priceCurrent" : 660,
+                    "priceOld" : "960 ₽",
+                    "rating" : "5.0",
+                    })
+                </li>
+
+                <li class="discount__item mix category-new">
+                    @include("../components/_product-card.html", {
+                    "section" : "discount",
+                    "new" : "new",
+                    "img" : "discount/discount-3",
+                    "alt" : "Лосось",
+                    "name" : "Лосось, 1 шт",
+                    "status" : "available",
+                    "priceCurrent" : 999,
+                    "priceOld" : "1199 ₽",
+                    "rating" : "4.5",
+                    })
+                </li>
+
+                <li class="discount__item mix category-hit">
+                    @include("../components/_product-card.html", {
+                    "section" : "discount",
+                    "hit" : "hit",
+                    "img" : "discount/discount-4",
+                    "alt" : "Сок Granini овощной",
+                    "name" : "Сок Granini овощной 100%, 0.5л",
+                    "status" : "ends",
+                    "priceCurrent" : 180,
+                    "priceOld" : "230 ₽",
+                    "rating" : "4.9",
+                    })
+                </li>
+
+                <li class="discount__item mix category-hit">
+                    @include("../components/_product-card.html", {
+                    "section" : "discount",
+                    "hit" : "hit",
+                    "img" : "discount/discount-5",
+                    "alt" : "Фруктовая корзина",
+                    "name" : "Фруктовая корзина, 1 шт",
+                    "status" : "available",
+                    "priceCurrent" : 3990,
+                    "priceOld" : "59990 ₽",
+                    "rating" : "4.8",
+                    })
+                </li>
+
+                <li class="discount__item mix category-hit">
+                    @include("../components/_product-card.html", {
+                    "section" : "discount",
+                    "hit" : "hit",
+                    "img" : "discount/discount-6",
+                    "alt" : "Свинина мякоть",
+                    "name" : "Свинина мякоть, 1 кг",
+                    "status" : "available",
+                    "priceCurrent" : 499,
+                    "priceOld" : "599 ₽",
+                    "rating" : "4.6",
+                    })
+                </li>
+            </ul>
+        </div>
+        <button class="discount__button button button--normal" type="button">
+            Показать еще
+        </button>
+    </div>
+</section>

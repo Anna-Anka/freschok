@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+@include("./components/_head.html", {
+"title" : "Фрешок | Каталог продуктов"
+})
+
+<body class="body">
+    <div class="wrapper wrapper--catalog">
+        @include("./components/_header.html")
+        @include("./components/_header-mobile.html")
+        @include("./components/_breadcrums.html", {
+        "link" : "Главная",
+        "current" : "Каталог товаров"
+        })
+        <div class="container"> 
+            <main class="main">
+                <h1 class="catalog-title">
+                    Каталог товаров
+                </h1>
+                <div class="catalog-wrapper">
+                    @include("./catalog-page/_filters.html")
+                    @include("./catalog-page/_catalog.html")
+                </div>
+            </main>
+        </div>
+        @include("./home-page/_advantages.html")
+        @include("./components/_footer.html")
+    </div>
+</body>
+<script src="js/main.min.js"></script>
+
+</html>

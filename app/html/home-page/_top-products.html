@@ -1,0 +1,142 @@
+<section class="top-products section">
+    <div class="container">
+        <h2 class="top-products__title title">
+            топовые товары
+        </h2>
+        <div class="top-products__box" data-ref="products">
+            <ul class="filters">
+                <li class="filters__item">
+                    <button class="filters__btn" type="button" data-filter="all">
+                        все товары
+                    </button>
+                </li>
+                <li class="filters__item">
+                    <button class="filters__btn" type="button" data-filter=".category-fruits">
+                        фрукты
+                    </button>
+                </li>
+                <li class="filters__item">
+                    <button class="filters__btn" type="button" data-filter=".category-vegetables">
+                        овощи
+                    </button>
+                </li>
+                <li class="filters__item">
+                    <button class="filters__btn" type="button" data-filter=".category-beverages">
+                        напитки
+                    </button>
+                </li>
+                <li class="filters__item">
+                    <button class="filters__btn" type="button" data-filter=".category-grocery">
+                        бакалея
+                    </button>
+                </li>
+            </ul>
+
+            <ul class="top-products__items">
+                <li class="top-products__item mix category-fruits">
+                    @include("../components/_product-card.html", {
+                    "section" : "top",
+                    "new" : "new",
+                    "discount" : "-50%",
+                    "img" : "product-1",
+                    "alt" : "Ананас",
+                    "name" : "Ананас, 1 кг",
+                    "priceCurrent" : "999 ₽",
+                    "priceOld" : "1999 ₽",
+                    })
+                </li>
+
+                <li class="top-products__item mix category-fruits">
+                    @include("../components/_product-card.html", {
+                    "section" : "top",
+                    "discount" : "",
+                    "img" : "product-2",
+                    "alt" : "Лимон",
+                    "name" : "Лимон, 1 кг",
+                    "priceCurrent" : "199 ₽",
+                    "priceOld" : "",
+                    })
+                </li>
+
+                <li class="top-products__item mix category-fruits">
+                    @include("../components/_product-card.html", {
+                    "section" : "top",
+                    "hit" : "hit",
+                    "discount" : "",
+                    "img" : "product-3",
+                    "alt" : "Питахайя красная с белой мякотью",
+                    "name" : "Питахайя красная с белой мякотью, 1шт",
+                    "priceCurrent" : "1019 ₽",
+                    "priceOld" : "",
+                    })
+                </li>
+
+                <li class="top-products__item mix category-vegetables">
+                    @include("../components/_product-card.html", {
+                    "section" : "top",
+                    "discount" : "",
+                    "new" : "new",
+                    "img" : "product-4",
+                    "alt" : "Перец оранжевый",
+                    "name" : "Перец оранжевый, 1кг",
+                    "priceCurrent" : "349 ₽",
+                    "priceOld" : "",
+                    })
+                </li>
+
+                <li class="top-products__item mix category-vegetables">
+                    @include("../components/_product-card.html", {
+                    "section" : "top",
+                    "discount" : "",
+                    "hit" : "hit",
+                    "img" : "product-5",
+                    "alt" : "Морковь молодая",
+                    "name" : "Морковь молодая с бабушкиной грядки, 1кг",
+                    "priceCurrent" : "49 ₽",
+                    "priceOld" : "",
+                    })
+                </li>
+
+                <li class="top-products__item mix category-beverages">
+                    @include("../components/_product-card.html", {
+                    "section" : "top",
+                    "discount" : "-30%",
+                    "img" : "product-6",
+                    "alt" : "Напиток сокосодержащий",
+                    "name" : "Напиток сокосодержащий Sanpellegrino Aranciata Orange Красный апельсин безалкогольн...",
+                    "priceCurrent" : "199 ₽",
+                    "priceOld" : "299 ₽",
+                    })
+                </li>
+
+                <li class="top-products__item mix category-beverages">
+                    @include("../components/_product-card.html", {
+                    "section" : "top",
+                    "new" : "new",
+                    "discount" : "",
+                    "img" : "product-7",
+                    "alt" : "Кофе с коноплей",
+                    "name" : "Кофе с коноплей органический Caffé Salomoni 250г",
+                    "priceCurrent" : "877 ₽",
+                    "priceOld" : "",
+                    })
+                </li>
+
+                <li class="top-products__item mix category-beverages">
+                    @include("../components/_product-card.html", {
+                    "section" : "top",
+                    "discount" : "",
+                    "img" : "product-8",
+                    "alt" : "Кетчуп томатный",
+                    "name" : "Кетчуп томатный детский органический Bio-Zentrale 500мл",
+                    "priceCurrent" : "600 ₽",
+                    "priceOld" : "",
+                    })
+                </li>
+            </ul>
+        </div>
+        <button class="top-products__button button button--border" type="button">
+            Показать еще
+        </button>
+    </div>
+</section>

@@ -1,28 +1,25 @@
 <!DOCTYPE html>
 <html lang="ru">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Фрешок</title>
-    <link rel="icon" href="img/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/style.min.css">
-</head>
-
+@include("./components/_head.html", {
+    "title" : "Фрешок | Главная страница"
+})
 <body class="body">
     <div class="wrapper">
-        @include("./components/header.html")
+        @include("./components/_header.html")
+        @include("./components/_header-mobile.html")
         <main class="main">
-            @include("./home-page/main-slider.html")
-            @include("./home-page/advantages.html")
-            @include("./home-page/top-products.html")
-            @include("./home-page/banners.html")
-            @include("./home-page/discount.html")
-            @include("./home-page/brands.html")
-            @include("./home-page/news.html")
+            <h1 class="visually-hidden">
+                Фрешок — свежие фрукты и овощи!
+            </h1>
+            @include("./home-page/_main-slider.html")
+            @include("./home-page/_advantages.html")
+            @include("./home-page/_top-products.html")
+            @include("./home-page/_sale.html")
+            @include("./home-page/_discount.html")
+            @include("./home-page/_brands.html")
+            @include("./home-page/_news.html")
         </main>
-        @include("./components/footer.html")
+        @include("./components/_footer.html")
     </div>
 </body>
 <script src="js/main.min.js"></script>

@@ -5,13 +5,24 @@
 @import 'libs';
 @import 'global';
 
+//Home page
 @import 'components/_header';
 @import 'home-page/_main-slider';
 @import 'home-page/_advantages';
 @import 'home-page/_top-products';
-@import 'home-page/_banners';
+@import 'home-page/_sale';
 @import 'home-page/_discount';
 @import 'home-page/_brands';
 @import 'home-page/_news';
+
+@import 'components/_sale-card';
+@import 'components/_product-card';
+@import 'components/_news-card';
+@import 'components/_filters';
+
 @import 'components/_footer';
 
+//Catalog page
+@import 'components/_breadcrums';
+@import 'catalog-page/_filters';
+@import 'catalog-page/_product-page';
